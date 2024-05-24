@@ -10,7 +10,7 @@
 <body>
     <div id="container">
         <input id="result" readonly>
-        <select id="system">
+        <select id="system" onchange="changeSystem()">
             <option value="binary">binarny</option>
             <option value="octal">ósemkowy</option>
             <option value="decimal" selected>dziesiętny</option>
@@ -19,7 +19,7 @@
         <div id="controls">
             <button onclick="clearDisplay()">C</button>
             <button onclick="deleteLast()"><i class="fa-solid fa-delete-left"></i></button>
-            <button class="operator" >%</button>
+            <button class="operator" onclick="sqrtNumber()">&#8730;</button>
             <button class="operator" onclick="appendToDisplay('÷')">÷</button>
             
             <button class="number" onclick="appendToDisplay('7')">7</button>
@@ -42,7 +42,6 @@
             <button id="equal-sign" onclick="calculate()">=</button>
         </div>
     </div>
-    <script src="decimal.js"></script>
-    <script src="hexa.js"></script>
+    <script src="calculate.js"></script>
 </body>
 </html>
